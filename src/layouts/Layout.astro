@@ -1,12 +1,12 @@
 ---
-import { ViewTransitions } from 'astro:transitions'
-import { Character } from '../components/Character'
-import { Navigation } from '../components/Navigation'
+import { ViewTransitions } from "astro:transitions";
+import { Character } from "../components/Character";
+import { Navigation } from "../components/Navigation";
 interface Props {
-  title: string
+  title: string;
 }
 
-const { title } = Astro.props
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -81,14 +81,14 @@ const { title } = Astro.props
 
       ::view-transition-new(content) {
         animation:
-          210ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
-          300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+          1000ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
+          310 cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
       }
     </style>
     <script>
-      document.addEventListener('astro:page-load', () => {
-        document.dispatchEvent(new CustomEvent('route-change'))
-      })
+      document.addEventListener("astro:page-load", () => {
+        document.dispatchEvent(new CustomEvent("route-change"));
+      });
     </script>
   </body>
 </html>
